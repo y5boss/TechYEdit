@@ -74,102 +74,54 @@ header nav a:hover, .current{
     margin-top: 0.3em;
 }
 
-.overlay img{
-    width: 30em;
-    max-width: 100%;
-}
-
-.hero{
+main{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    height: calc(100vh - 4em);
-    background: linear-gradient(var(--overlay), var(--overlay)), url('Images/Video_editing_close_up.jpg');
-    background-size: cover;
-    color: #fff;
-    padding: 0 4em;
+    align-items: center;
+    min-height: calc(100vh - 8em);
+    padding: 0 1em;
 }
 
-.hero h1{
-    font-size: 3.5rem;
+.card{
+    width: 20em;
+    max-width: 100%;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.card:not(:last-of-type){
+    margin-right: 1em;
+}
+
+.card h2{
     margin-bottom: 0.2em;
 }
 
-.hero p{
-    font-size: 1.5rem;
-    margin-bottom: 1.3em;
-}
-
-.hero a{
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 0.5em 1em;
-    font-size: 1.1rem;
-    transition: 300ms background ease-in-out;
-}
-
-.hero .secondary{
-    outline: 1px solid var(--primary-color);
-    outline-offset: -1px;
-    background-color: transparent;
-    margin-left: 0.5em;
-}
-
-.hero .primary:hover{
-    background-color: var(--primary-dark);
-}
-
-.hero .secondary:hover{
-    background-color: var(--primary-color);
-}
-
-.cards{
-    padding: 4em;
-    display: grid;
-    justify-content: space-between;
-    grid-gap: 4em 2em;
-    grid-template-columns: repeat(auto-fit, 23em);
-}
-
-.card h3{
-    font-size: 1.3rem;
-    margin-bottom: 0.3em;
-}
-
-.card p{
-    color: #444;
-}
-
-.contact{
-    display: flex;
-    justify-content: center;
-    padding: 2em 4em 6em;
-}
-
-.contact img{
-    width: 50%;
-    margin-right: 2em;
-}
-
-.contact h3{
-    font-size: 2rem;
-}
-
-.contact p{
+.card .price{
     font-size: 1.2rem;
-    margin: 0.5em 0 1.5em;
+    margin-bottom: 1em;
+    font-weight: bold;
 }
 
-.contact a{
+.card p:not(.price){
+    color: #333;
+}
+
+.card button{
+    outline: none;
+    border: none;
     background-color: var(--primary-color);
     color: #fff;
-    padding: 0.5em 1em;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    padding: 0.5em 0;
+    margin-top: 2em;
+    width: 100%;
+    cursor: pointer;
     transition: 300ms background ease-in-out;
 }
 
-.contact a:hover{
+.card button:hover{
     background-color: var(--primary-dark);
 }
 
@@ -207,28 +159,6 @@ footer p{
     font-size: 0.9rem;
 }
 
-@media(max-width: 880px){
-    .cards{
-        text-align: center;
-        grid-template-columns: 1fr;
-    }
-    
-    .contact{
-        flex-direction: column;
-        padding: 2em 0 6em;
-    }
-    
-    .contact img{
-        width: 100%;
-        margin: 0 0 4em;
-    }
-
-    .contact .content{
-        text-align: center;
-        padding: 0 2em;
-    }
-}
-
 @media(max-width: 768px){
     header{
         padding: 0 2em;
@@ -262,74 +192,12 @@ footer p{
         background-color: #333;
     }
 
-    .hero{
-        padding: 0 2em;
-        align-items: center;
+    main{
+        padding: 2em 1em;
+    flex-direction: column;
     }
-
-    .hero h1{
-        font-size: 3.2rem;
-    }
-    
-    .hero p{
-        font-size: 1.2rem;
-        margin-bottom: 2em;
-    }
-    
-    .hero a{
-        padding: 0.5em 1.2em;
-        font-size: 1rem;
-    }
-
-    .cards{
-        padding: 4em 2em;
-    }
-
-    .contact h3{
-        font-size: 1.8rem;
-    }
-    
-    .contact p{
-        margin: 1em 0 2.2em;
-        font-size: 1rem;
-    }
-
-    .contact a{
-        font-size: 1rem;
-    }
-
-    footer{
-        padding: 0 2em;
-    }
-
-    footer ion-icon{
-        font-size: 1.6rem;
-    }
-
-    footer p{
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width: 500px){
-    .hero h1{
-        font-size: 2.6rem;
-    }
-    
-    .hero p{
-        font-size: 1rem;
-    }
-    
-    .hero a{
-        font-size: 0.9rem;
-    }
-
-    .contact h3{
-        font-size: 1.6rem;
-    }
-    
-    .contact p, .contact a{
-        font-size: 0.9rem;
+    .card{
+        margin: 0 0 1em;
     }
 
     footer{
@@ -344,23 +212,5 @@ footer p{
 
     footer p{
         margin: 0 0 1em;
-    }
-}
-
-@media(max-width: 425px){
-    header, .hero, .contact .content, footer{
-        padding: 0 1em;
-    }
-
-    .hero h1{
-        font-size: 2rem;
-    }
-    
-    .hero p{
-        font-size: 0.8rem;
-    }
-
-    .cards{
-        padding: 4em 1em;
     }
 }
